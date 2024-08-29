@@ -36,6 +36,15 @@ else:
 #Write a program that asks the user to enter a year and notifies the user whether the input year is a leap year.
 # A year is a leap year if it is divisible by four.
 # However, years divisible by 100 are leap years only if they are also divisible by 400.
+ # first way using if :
+
+year =int(input("Enter the year: "))
+if (year%100==0 and year%400==0 ) or (year%4==0):
+    print(f"the  year is {year} is a leap year.")
+else:
+    print(f"the  year is {year} is not a leap year.")
+
+# second way using while:
 
 year = ""
 while year !="exit" :
@@ -54,7 +63,7 @@ while year !="exit" :
 #A normal hemoglobin value for adult females is between 117-155 g/l.
 #A normal hemoglobin value for adult males is between 134-167 g/l.
 
-gender = input("Enter your biological gender ( male/female): ")
+gender = (input("Enter your biological gender ( male/female): ")).lower()
 hemoglobin = int(input("Enter your hemoglobin (hemoglobin): "))
 if gender == "male" and 134 <=hemoglobin<=167:
     print(" Your hemoglobin level is normal")
@@ -69,6 +78,5 @@ else:
         print(" Your hemoglobin level is low")
     elif gender == "female" and hemoglobin>155:
         print(" Your hemoglobin level is high")
-
 
 
