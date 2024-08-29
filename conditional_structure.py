@@ -2,7 +2,7 @@
 # If the zander does not fulfill the size limit, the program instructs to release the fish back
 # into the lake and notifies the user of how many centimeters below the size limit the caught fish was.
 # A zander must be 42 centimeters or longer to meet the size limit.
-'''
+
 length = float(input("Enter the length of the zander in centimeters: "))
 size_limit = 42
 if length >= size_limit:
@@ -47,7 +47,7 @@ while year !="exit" :
             print(f" The year {year} is a leap year ")
     else:
             print(f" The year {year} is not a leap year ")
-'''
+
 
 #Write a program that asks for the biological gender and hemoglobin value (g/l).
 # The program the notifies the user if the hemoglobin value is low, normal or high.
