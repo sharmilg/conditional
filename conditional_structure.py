@@ -9,7 +9,7 @@ if length >= size_limit:
     print("The zander meets the size limit:")
 else:
     difference = size_limit-length
-    print(f" The zander is {difference:.2f} centimeter below the size limit :")
+    print(f" The zander is {difference:.2f} centimeter below the size limit.")
     print("you must release the fish into the lake")
 
 
@@ -64,7 +64,7 @@ else:
     elif gender == "male" and hemoglobin>167:
         print(" Your hemoglobin level high")
     if gender == "female" and 117<= hemoglobin<=155:
-        print(" Your hemoglobin level high")
+        print(" Your hemoglobin level normal")
     elif gender == "female" and hemoglobin<117:
         print(" Your hemoglobin level low")
     elif gender == "female" and hemoglobin>155:
