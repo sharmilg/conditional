@@ -6,11 +6,11 @@
 length = float(input("Enter the length of the zander in centimeters: "))
 size_limit = 42
 if length >= size_limit:
-    print("The zander meets the size limit.")
+    print("The zander meets the size limit you can keep the fish.")
 else:
     difference = size_limit-length
     print(f" The zander is {difference:.2f} centimeter below the size limit.")
-    print("you must release the fish into the lake")
+    print("You must release the fish into the lake.")
 
 
 #Write a program that asks the user to enter the cabin class of a cruise ship and then prints out a written
@@ -25,13 +25,13 @@ cabin_class = (input("Enter the cabin classof the cruise ship:LUX, A,B,C :")).up
 if cabin_class == "LUX":
     print("LUX: Upper-deck cabin with a balcony.")
 elif cabin_class == "A":
-    print("A: Above the car deck,equipped with a window:")
+    print("A: Above the car deck,equipped with a window.")
 elif cabin_class == "B":
-    print("B: Windowless cabin above the car deck.:")
+    print("B: Windowless cabin above the car deck.")
 elif cabin_class == "C":
-    print("C: Windowless cabin below the car deck.:")
+    print("C: Windowless cabin below the car deck.")
 else:
-    print("Invalid cabin class")
+    print("Invalid cabin class.")
 
 #Write a program that asks the user to enter a year and notifies the user whether the input year is a leap year.
 # A year is a leap year if it is divisible by four.
@@ -60,15 +60,15 @@ if gender == "male" and 134 <=hemoglobin<=167:
     print(" Your hemoglobin level is normal")
 else:
     if gender == "male" and hemoglobin<134:
-        print(" Your hemoglobin level low")
+        print(" Your hemoglobin level is low")
     elif gender == "male" and hemoglobin>167:
-        print(" Your hemoglobin level high")
+        print(" Your hemoglobin level is high")
     if gender == "female" and 117<= hemoglobin<=155:
-        print(" Your hemoglobin level normal")
+        print(" Your hemoglobin level is normal")
     elif gender == "female" and hemoglobin<117:
-        print(" Your hemoglobin level low")
+        print(" Your hemoglobin level is low")
     elif gender == "female" and hemoglobin>155:
-        print(" Your hemoglobin level high")
+        print(" Your hemoglobin level is high")
 
 
 
