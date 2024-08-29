@@ -64,7 +64,7 @@ else:
     elif gender == "male" and hemoglobin>167:
         print(" Your hemoglobin level high")
     if gender == "female" and 117<= hemoglobin<=155:
-        print(" Your hemoglobin level high")
+        print(" Your hemoglobin level high ")
     elif gender == "female" and hemoglobin<117:
         print(" Your hemoglobin level low")
     elif gender == "female" and hemoglobin>155:
