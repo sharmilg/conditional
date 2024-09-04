@@ -69,7 +69,8 @@ while i < 5:
         i = i+1
         print(f"Incorrect username or password.")
 
-print("Access denied")
+if i == 5:
+    print("Access denied")
 
 #Implement an algorithm for calculating an approximation for the value of pi (π). Let's assume that A is a unit circle.
 # A unit circle has the radius of one and it is centered at the origin (0,0). Smallest possible square B is drawn
