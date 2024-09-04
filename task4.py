@@ -86,22 +86,22 @@ print("Access denied")
 
 import random
 
-def estimate_pi(num_points):
-    inside_circle = 0
-    total_points = 0
+num_points = 0
+while num_points <= 0:
+    num_points = int(input("Enter the number of random points to generate: "))
 
-    while total_points < num_points:
-        x = random.uniform(-1, 1)
-        y = random.uniform(-1, 1)
+inside_circle = 0
+total_points = 0
 
-        if x**2 + y**2 <= 1:
-            inside_circle += 1
-        total_points += 1
+while total_points < num_points:
+    x = random.uniform(-1, 1)
+    y = random.uniform(-1, 1)
 
-    pi_estimate = 4 * inside_circle / num_points
-    return pi_estimate
+    if x * 2 + y * 2 < 1:
+        inside_circle += 1
 
-num_points = int(input("Enter the number of random points to generate: "))
-pi_approx = estimate_pi(num_points)
-print(f"The approximation of pi using {num_points} random points is: {pi_approx}")
+    total_points += 1
 
+pi_estimate = 4 * inside_circle / total_points
+
+print(f"The approximation of pi using {num_points} random points is: {pi_estimate}")
