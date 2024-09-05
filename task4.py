@@ -87,23 +87,15 @@ if i == 5:
 # easy to test if a point falls inside circle A by testing if it fulfills the in equation x^2+y^2<1.).
 
 import random
-
-num_points = 0
-while num_points <= 0:
-    num_points = int(input("Enter the number of random points to generate: "))
-
+num_points = int(input("Enter the number of random points to generate: "))
 inside_circle = 0
-total_points = 0
-
-while total_points < num_points:
+counter = 0
+while counter < num_points:
     x = random.uniform(-1, 1)
     y = random.uniform(-1, 1)
 
-    if x * 2 + y * 2 < 1:
+    if x ** 2 + y ** 2 < 1:
         inside_circle += 1
-
-    total_points += 1
-
-pi_estimate = 4 * inside_circle / total_points
-
-print(f"The approximation of pi using {num_points} random points is: {pi_estimate}")
+    counter += 1
+pi = 4 * inside_circle / counter
+print(f"The approximation of pi using {num_points} random points is: {pi}")
