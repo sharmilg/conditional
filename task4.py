@@ -1,8 +1,5 @@
 #Write a program that uses a while loop to print out all numbers divisible
 # by three in the range of 1-1000.
-from lib2to3.pygram import python_grammar
-from lib2to3.pytree import convert
-
 num = 1
 while num <= 1000:
     if num % 3 == 0:
