@@ -22,16 +22,20 @@ while True:
 #Write a program that asks the user to enter numbers until they enter an empty string
 # to quit. Finally, the program prints out the smallest and largest number from the
 # numbers it received.
-numbers = []
+
+smallest = None
+largest = None
 while True:
-    num = input("Enter a number or press Enter to stop: ")
-    if num == "":
+    user = input("Enter a number or empty string to exit: ")
+    if user == "":
         break
-    num = float(num)
-    numbers.append(num)
-if numbers :
-    print(f"the smallest number is {min(numbers)}")
-    print(f"the largest number is {max(numbers)}")
+    number = float(user)
+    if largest is None or number > largest:
+        largest = number
+    if smallest is None or number < smallest:
+        smallest = number
+print(f"Largest number: {largest}")
+print(f"Smallest number: {smallest}")
 
 #Write a game where the computer draws a random integer between 1 and 10.
 # The user tries to guess the number until they guess the right number.
@@ -40,8 +44,7 @@ if numbers :
 
 import random
 numbers = random.randint(1,10)
-guess = " "
-while guess != numbers:
+while True:
     guess = int(input("Guess a number from 1 to 10: "))
     if guess > numbers:
         print("Too high")
@@ -49,6 +52,7 @@ while guess != numbers:
         print("Too low")
     else:
         print("Correct")
+        break
 
 #Write a program that asks the user for a username and password.
 # If either or both are incorrect, the program ask the user to enter the username and password again.
