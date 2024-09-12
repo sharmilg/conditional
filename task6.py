@@ -3,16 +3,12 @@
 
 import random
 def roll():
-    return random.randint(1, 6)
-
-def main():
-    result = 0
-    while result != 6:
-        result = roll()
-        print(f"The dice rolled: {result}")
-
-if __name__ == "__main__":
-    main()
+    score = random.randint(1, 6)
+    return score
+result = 0
+while result != 6:
+    result = roll()
+    print(f"The dice rolled: {result}")
 
 
 #Modify the function above so that it gets the number of sides on the dice as a parameter. With the modified function
@@ -27,11 +23,13 @@ def dice(sides):
 
 def main():
     sides = int(input("Enter the number of sides on the dice: "))
+    attempt = 0
     while True:
         roll = dice(sides)
-        print(f"The dice rolled: {roll}")
+        attempt += 1
+        print(f"The dice rolled for {attempt} and got {roll}")
         if roll == sides:
-            print("You rolled the maximum number!")
+            print(f"You rolled the maximum number! {sides}")
             break
 
 if __name__ == "__main__":
@@ -48,47 +46,43 @@ def main():
     while True:
         gallons = float(input("Enter the volume in gallons (negative value to quit): "))
         if gallons < 0:
-            print("Exiting the program.")
+            print("Program quited")
             break
         liters = conversion(gallons)
         print(f"{gallons} gallons is equal to {liters:.2f} liters.")
-
-if __name__ == "__main__":
-    main()
-
-
+main()
 
 #Write a function that gets a list of integers as a parameter. The function returns the sum of all the numbers in the
 # list. For testing, write a main program where you create a list, call the function, and print out the value it returned.
 
-def sum(numbers):
-    return sum(numbers)
+def addme(numbers):
+    total = 0
+    for number in numbers:
+        total += number
+    return total
 
-def main():
-    numbers = [1, 2, 3, 4, 5]
-    total = sum(numbers)
-    print(f"The sum of the list {numbers} is {total}.")
+numbers = [1, 2, 3, 4, 5]
+result = addme(numbers)
+print(f"The sum of the list {numbers} is {result}.")
 
-if __name__ == "__main__":
-    main()
 
 #Write a function that gets a list of integers as a parameter. The function returns a second list that is otherwise the
 # same as the original list except that all uneven numbers have been removed. For testing, write a main program where
 # you create a list, call the function, and then print out both the original as well as the cut-down list.
 
-def remove(numbers):
-    return [num for num in numbers if num % 2 == 0]
+def remove_odd_numbers(numbers):
+    remove_odd_numbers =[]
+    for number in numbers:
+        if number % 2 == 0:
+            remove_odd_numbers.append(number)
+    return remove_odd_numbers
 
-def main():
-    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+original_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+list = remove_odd_numbers(original_list)
 
-    even_list = remove(list)
+print(f"Original list:{original_list}")
+print(f"List without odd numbers:{list}")
 
-    print("Original list:", list)
-    print("List without odd numbers:", even_list)
-
-if __name__ == "__main__":
-    main()
 
 #Write a function that receives two parameters: the diameter of a round pizza in centimeters and the price of the pizza
 # in euros. The function calculates and returns the unit price of the pizza per square meter. The main program asks the
