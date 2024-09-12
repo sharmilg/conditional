@@ -3,10 +3,13 @@
 
 import random
 user = int(input("Enter how many dice to roll: "))
+diceset = []
 sum = 0
-for _ in range(int(user)):
-    roll = random.randint(1,6)
-    sum= sum + roll
+for i in range(int(user)):
+    dice_roll = random.randint(1,6)
+    diceset.append(dice_roll)
+    sum+= dice_roll
+    print(diceset)
 print(f" the sum of the dice rolled is {sum}")
 
 #Write a program that asks the user to enter numbers until they input an empty string to quit.
@@ -22,7 +25,7 @@ while True:
     numbers.append(int(user))
 numbers.sort(reverse=True)
 print("The five greatest numbers are:")
-for i in range(min(5, len(numbers))):
+for i in range(min(5,len(numbers))):
     print(numbers[i])
 
 #Write a program that asks the user for an integer and tells if the number is a prime number.
@@ -37,9 +40,9 @@ if number >1:
         if number % i == 0:
             print(f"{number} is not a prime number")
             break
-        else:
+    else:
             print(f"{number} is a prime number.")
-            break
+
 else:
     print(f"{number} is not a prime number.")
 
@@ -53,6 +56,6 @@ cities = []
 for i in range(5):
     city = input("Enter the name of city {}: ".format(i + 1))
     cities.append(city)
-print("\nThe cities you entered are:")
+print("The cities you entered are:")
 for city in cities:
     print(city)
