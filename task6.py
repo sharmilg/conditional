@@ -98,10 +98,6 @@ def calculate_unit_price(diameter, price):
     unit_price = price / area
     return unit_price
 
-
-
-
-
 diameter1 = float(input("Enter the diameter of the first pizza (cm): "))
 price1 = float(input("Enter the price of the first pizza (euros): "))
 
