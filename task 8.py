@@ -1,7 +1,7 @@
 #Write a program that asks the user to enter the ICAO code of an airport. The program fetches and prints out
 # the corresponding airport name and location (town) from the airport database used on this course. The ICAO codes
 # are stored in the ident column of the airport table.
-'''
+
 import mysql.connector
 
 def get_airport_info(icao_code):
@@ -69,7 +69,6 @@ connection = mysql.connector.connect(
 iso_country = input("Enter the ISO country code of the airport: ").upper()
 get_airport_by_country(iso_country)
 
-'''
 #Write a program that asks the user to enter the ICAO codes of two airports. The program prints out the distance
 # between the two airports in kilometers. The calculation is based on the airport coordinates fetched from the
 # database. Calculate the distance using the geopy library: https://geopy.readthedocs.io/en/stable/. Install the
