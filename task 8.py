@@ -31,8 +31,7 @@ connection = mysql.connector.connect(
     collation="utf8mb4_general_ci"
 )
 
-# Prompt the user to enter the ICAO code
-icao_code = input("Enter the ICAO code of the airport: ").strip().upper()
+icao_code = input("Enter the ICAO code of the airport: ").upper()
 
 get_airport_info(icao_code)
 
@@ -42,14 +41,18 @@ get_airport_info(icao_code)
 # stored in the ident column of the airport table.
 
 import mysql.connector
-from tabulate import tabulate
+
 def get_airport_by_country(iso_country):
     query = "select name, type from airport where airport.iso_country = %s order by type"
     cursor = connection.cursor()
     cursor.execute(query, (iso_country,))
     result = cursor.fetchall()
     if result:
-        print(tabulate(result, headers = ["Name", "Type"], tablefmt="fancy_grid"))
+        print(f"{'Name':<30} {'Type':<20}")
+        print("-" * 50)
+        for row in result:
+            print(f"{row[0]:<30} {row[1]:<20}")
+
     else:
         print("No airport found with the given ISO country code.")
 
